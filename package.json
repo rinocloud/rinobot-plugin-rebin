@@ -1,0 +1,18 @@
+{
+  "main": "index.py",
+  "engine": "python3",
+  "name": "rinobot-plugin-rebin",
+  "description": "Rebins a column of data",
+  "version": "0.0.1",
+  "template": "--column=2 --algo=max",
+  "author": "eoin murray",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "pip install rinobot-plugin --upgrade"
+  },
+  "repository": "https://github.com/rinocloud/rinobot-plugin-rebin.git",
+  "keywords": [
+    "rinobot",
+    "rinocloud"
+  ]
+}

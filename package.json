@@ -3,7 +3,7 @@
   "engine": "python3",
   "name": "rinobot-plugin-rebin",
   "description": "Rebins a column of data",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "template": "--column=2 --algo=max",
   "author": "eoin murray",
   "license": "MIT",
@@ -16,12 +16,19 @@
     "algo": {
       "type": "string",
       "description": "Algorithm to calculate the values in the new bin.",
-      "allowed": ["average", "sum", "max"]
+      "allowed": [
+        "average",
+        "sum",
+        "max"
+      ]
     },
     "xtime": {
       "type": "bool",
       "description": "Specify whether the first column is time - and therefore new bin values are average.",
-      "allowed": [true, false]
+      "allowed": [
+        true,
+        false
+      ]
     }
   },
   "scripts": {

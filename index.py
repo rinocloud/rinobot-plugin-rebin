@@ -1,7 +1,7 @@
 import rinobot_plugin as bot
 import numpy as np
 
-def rebin(data, binsize, algo='avg', xtime=None):
+def rebin(data, binsize, algo='average', xtime=None):
     col_num = data.shape[1]
     new_data = np.zeros((data.shape[0]// binsize, col_num))
 
@@ -13,7 +13,7 @@ def rebin(data, binsize, algo='avg', xtime=None):
             if xtime and index == 0:
                 new_row = np.append(new_row, sublist.mean())
             else:
-                if not algo or algo == 'avg':
+                if not algo or algo == 'average':
                     new_row = np.append(new_row, sublist.mean())
                 if algo == 'sum':
                     new_row = np.append(new_row, sublist.sum())
@@ -30,11 +30,11 @@ def main():
     data = bot.loadfile(filepath)
 
     # now comes the custom plugin logic
-    binsize = bot.get_arg('bin_multiple', type=int, required=True)
+    binsize = bot.get_arg('binsize', type=int, required=True)
     algo = bot.get_arg('algo', type=str)
     xtime = bot.get_arg('xtime', type=bool)
     if not algo:
-        algo='avg'
+        algo='average'
 
     new_data = rebin(data, binsize, algo=algo, xtime=xtime)
 

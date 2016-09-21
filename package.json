@@ -7,6 +7,23 @@
   "template": "--column=2 --algo=max",
   "author": "eoin murray",
   "license": "MIT",
+  "options": {
+    "binsize": {
+      "type": "int",
+      "description": "Specify binsize multiple - i.e. binsize=4 for a new bin four times bigger.",
+      "required": true
+    },
+    "algo": {
+      "type": "string",
+      "description": "Algorithm to calculate the values in the new bin.",
+      "allowed": ["average", "sum", "max"]
+    },
+    "xtime": {
+      "type": "bool",
+      "description": "Specify whether the first column is time - and therefore new bin values are average.",
+      "allowed": [true, false]
+    }
+  },
   "scripts": {
     "postinstall": "pip install rinobot-plugin --upgrade"
   },

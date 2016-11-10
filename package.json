@@ -3,7 +3,7 @@
   "engine": "python3",
   "name": "rinobot-plugin-rebin",
   "description": "Rebins a column of data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "template": "--column=2 --algo=max",
   "author": "eoin murray",
   "license": "MIT",
